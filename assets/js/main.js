@@ -26,12 +26,6 @@
 
 
 
-
-
-
-
-
-
 const team = [
 
     {
@@ -51,3 +45,5 @@ const team = [
     },
 
 ]
+
+console.log(team);
