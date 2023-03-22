@@ -26,7 +26,7 @@
 //Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
 
-
+//Creare l’array di oggetti con le informazioni fornite.
 const team = [
 
     {
@@ -62,13 +62,18 @@ const team = [
 
 ]
 
+//Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 console.log(team);
 
+
+//Stampare le stesse informazioni su DOM sottoforma di stringhe
 const rowEl = document.querySelector('.row')
 
 for (let i = 0; i < team.length; i++) {
     const thisTeam = team[i];
     console.log(thisTeam);
+    //Organizzare i singoli membri in card/schede
+    //Trasformare la stringa foto in una immagine effettiva
     const markup = `
         <div class="col">
             <div class="card">
