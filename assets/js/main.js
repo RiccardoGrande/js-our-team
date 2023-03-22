@@ -12,6 +12,7 @@
 //Trasformare la stringa foto in una immagine effettiva
 //BONUS 2:
 //Organizzare i singoli membri in card/schede
+
 //Consigli del giorno:
 //Ragioniamo come sempre a step.
 //Prima la logica in italiano e poi traduciamo in codice.
@@ -31,34 +32,57 @@ const team = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        photo: 'wayne-barnett-founder-ceo.jpg',
+        photo: './assets/img/wayne-barnett-founder-ceo.jpg',
     },
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        photo: 'angela-caroll-chief-editor.jpg',
+        photo: './assets/img/angela-caroll-chief-editor.jpg',
     },
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        photo: 'walter-gordon-office-manager.jpg',
+        photo: './assets/img/walter-gordon-office-manager.jpg',
     },
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        photo: 'angela-lopez-social-media-manager.jpg',
+        photo: './assets/img/angela-lopez-social-media-manager.jpg',
     },
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        photo: 'scott-estrada-developer.jpg',
+        photo: './assets/img/scott-estrada-developer.jpg',
     },
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        photo: 'barbara-ramos-graphic-designer.jpg',
+        photo: './assets/img/barbara-ramos-graphic-designer.jpg',
     },
 
 ]
 
 console.log(team);
+
+const rowEl = document.querySelector('.row')
+
+for (let i = 0; i < team.length; i++) {
+    const thisTeam = team[i];
+    console.log(thisTeam);
+    const markup = `
+        <div class="col">
+            <div class="card">
+                <img src="${thisTeam.photo}" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h3>
+                        ${thisTeam.name} 
+                    </h3>
+                    <p>
+                        ${thisTeam.role}
+                    </p>
+                </div>
+                
+            </div>
+        </div>`
+    rowEl.innerHTML += markup
+}
